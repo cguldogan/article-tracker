@@ -10,7 +10,7 @@ const ArticleList = ({ articles, onDelete }) => {
                         <div className="article-info">
                             <div className="d-flex align-items-center">
                                 {article.favicon && <img src={article.favicon} alt="favicon" className="favicon mr-2" />}
-                                <div>{article.title}</div>
+                                <a href={article.title} target="_blank" rel="noopener noreferrer">{article.title}</a>
                             </div>
                             <div className="text-muted">{new Date(article.visitDate).toLocaleDateString()}</div>
                         </div>

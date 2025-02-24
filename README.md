@@ -9,6 +9,7 @@ Article Tracker is a web application that allows you to track articles you have 
 - Validate URLs by making an HTTP request to check if they are accessible.
 - Fetch and display the favicon of the entered URL.
 - Display the list of articles with the visit date.
+- Convert listed URLs to clickable links.
 - Delete articles from the list.
 - Display the total count of articles read.
 - Scrollable list of articles when there are multiple entries.
@@ -83,7 +84,7 @@ You can also run the application using Docker and Docker Compose.
 
 - `ArticleInput`: Component for entering and saving article URLs.
 - `ArticleCounter`: Component for displaying the total count of articles read.
-- `ArticleList`: Component for displaying the list of articles with visit dates, favicons, and delete buttons.
+- `ArticleList`: Component for displaying the list of articles with visit dates, favicons, clickable links, and delete buttons.
 
 ## Backend
 
