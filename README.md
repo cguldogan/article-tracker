@@ -100,3 +100,26 @@ You can also run the application using Docker and Docker Compose.
 ## License
 
 This project is licensed under the MIT License.
+
+
+## Updating the Application (Docker)
+
+To update the application when using Docker, follow these steps:
+
+1. Pull the latest changes from the repository:
+
+    ```sh
+    git pull origin main
+    ```
+
+2. Rebuild the Docker images:
+
+    ```sh
+    docker-compose build
+    ```
+
+3. Restart the Docker containers:
+
+    ```sh
+    docker-compose up -d
+    ```
