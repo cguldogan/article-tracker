@@ -15,7 +15,9 @@ Article Tracker is a web application that allows you to track articles you have 
 - Convert listed URLs to clickable links.
 - Delete articles from the list.
 - Display the total count of articles read.
+- Display the count of articles read on a selected date.
 - Scrollable list of articles when there are multiple entries.
+- Navigate through dates using back and forward buttons.
 
 ## Installation
 
