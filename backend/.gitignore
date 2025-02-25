@@ -31,7 +31,7 @@ jspm_packages/
 # Docker
 docker-compose.override.yml
 docker-compose.override.yaml
-Dockerfile
+
 
 # Coverage directory used by tools like istanbul
 coverage/
