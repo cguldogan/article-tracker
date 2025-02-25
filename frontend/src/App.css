@@ -57,3 +57,7 @@ h2 {
     height: 16px;
     margin-right: 10px;
 }
+
+.date-selector {
+    margin-bottom: 1rem;
+}

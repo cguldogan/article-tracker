@@ -64,6 +64,27 @@ class ArticleController {
         }
     }
 
+    async getArticlesByDate(req, res) {
+        try {
+            const { date } = req.query;
+            const start = new Date(date);
+            start.setHours(0, 0, 0, 0);
+            const end = new Date(date);
+            end.setHours(23, 59, 59, 999);
+
+            const articles = await this.Article.find({
+                visitDate: {
+                    $gte: start,
+                    $lte: end,
+                },
+            });
+            res.status(200).json(articles);
+        } catch (error) {
+            console.error('Error retrieving articles by date:', error.message);
+            res.status(500).json({ message: 'Error retrieving articles by date', error });
+        }
+    }
+
     async getArticleCount(req, res) {
         try {
             const count = await this.Article.countDocuments();
