@@ -78,8 +78,9 @@ const App = () => {
     useEffect(() => {
         const fetchArticleCount = async (date) => {
             try {
-                const response = await fetch(`/api/articles/count?date=${date}`);
+                const response = await fetch(`${apiUrl}/api/articles/count?date=${date}`);
                 const data = await response.json();
+                console.log('Fetched article count:', data.count); // Add logging
                 setArticleCount(data.count);
             } catch (error) {
                 console.error('Error fetching article count:', error);
@@ -87,7 +88,7 @@ const App = () => {
         };
 
         fetchArticleCount(filterDate);
-    }, [filterDate]);
+    }, [filterDate, apiUrl]);
 
     return (
         <div className="container d-flex flex-column align-items-center justify-content-center vh-100">
