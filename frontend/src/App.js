@@ -9,7 +9,7 @@ const App = () => {
     const [articleCount, setArticleCount] = useState(0);
     const [articles, setArticles] = useState([]);
     const [error, setError] = useState('');
-    const [filterDate, setFilterDate] = useState('');
+    const [filterDate, setFilterDate] = useState(new Date().toISOString().split('T')[0]); // Set initial state to today's date
     const apiUrl = process.env.REACT_APP_API_URL;
 
     const fetchArticles = useCallback(async () => {
@@ -42,7 +42,7 @@ const App = () => {
             }
 
             setError('');
-            fetchArticles();
+            fetchArticlesByDate(filterDate); // Fetch articles for the current filter date
         } catch (error) {
             setError('An error occurred while saving the article.');
         }
@@ -61,7 +61,7 @@ const App = () => {
             }
 
             setError('');
-            fetchArticles();
+            fetchArticlesByDate(filterDate); // Fetch articles for the current filter date
         } catch (error) {
             setError('An error occurred while deleting the article.');
         }
