@@ -87,7 +87,18 @@ class ArticleController {
 
     async getArticleCount(req, res) {
         try {
-            const count = await this.Article.countDocuments();
+            const { date } = req.query;
+            const start = new Date(date);
+            start.setHours(0, 0, 0, 0);
+            const end = new Date(date);
+            end.setHours(23, 59, 59, 999);
+
+            const count = await this.Article.countDocuments({
+                visitDate: {
+                    $gte: start,
+                    $lte: end,
+                },
+            });
             res.status(200).json({ count });
         } catch (error) {
             console.error('Error retrieving article count:', error.message);

@@ -75,6 +75,20 @@ const App = () => {
         }
     }, [fetchArticles, fetchArticlesByDate, filterDate]);
 
+    useEffect(() => {
+        const fetchArticleCount = async (date) => {
+            try {
+                const response = await fetch(`/api/articles/count?date=${date}`);
+                const data = await response.json();
+                setArticleCount(data.count);
+            } catch (error) {
+                console.error('Error fetching article count:', error);
+            }
+        };
+
+        fetchArticleCount(filterDate);
+    }, [filterDate]);
+
     return (
         <div className="container d-flex flex-column align-items-center justify-content-center vh-100">
             <h1 className="mb-4">Article Tracker</h1>
