@@ -92,7 +92,7 @@ const App = () => {
 
     return (
         <div className="container d-flex flex-column align-items-center justify-content-center vh-100">
-            <h1 className="mb-4">Article Tracker</h1>
+            <h1 className="mb-4">My Fancy Articles</h1>
             <ArticleInput onSave={handleArticleSave} error={error} />
             <DateSelector selectedDate={filterDate} onDateChange={setFilterDate} />
             <ArticleCounter count={articleCount} />

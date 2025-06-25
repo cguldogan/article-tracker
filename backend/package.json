@@ -1,7 +1,7 @@
 {
   "name": "article-tracker-backend",
   "version": "1.0.0",
-  "description": "Backend for the Article Tracker application",
+  "description": "Backend for the My Fancy Articles application",
   "main": "src/app.js",
   "type": "module",
   "scripts": {

@@ -1,6 +1,6 @@
-# Article Tracker
+# My Fancy Articles
 
-Article Tracker is a web application that allows you to track articles you have read. You can add articles by entering their URLs, and the application will validate the URLs before saving them. You can also delete articles from the list.
+My Fancy Articles is a web application that allows you to track articles you have read. You can add articles by entering their URLs, and the application will validate the URLs before saving them. You can also delete articles from the list.
 
 ![image](https://github.com/user-attachments/assets/ba220390-6364-42cb-a44e-be95ed0aa230)
 
